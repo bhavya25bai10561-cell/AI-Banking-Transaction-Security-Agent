@@ -296,6 +296,36 @@ Mechanic: The evaluated payload is formatted into an audit record, pushed to the
 
 UI Refresh: The live audit trail table (renderAuditTable) and automated risk distribution charts (updateAnalyticsCharts) update instantly to reflect the new transaction metrics.
 
+Tools used to build this project:
+
+1. Frontend & UI Architecture
+
+HTML5 & CSS3: Provides the structural layout and styling for all four dashboard views (Home, Analytics, Security, and Profile).
+
+CSS Custom Properties (CSS Variables): Used extensively for maintaining a consistent cybertech color palette (e.g., --bg-deep: #061325, --primary-cyan: #00E5FF, --danger: #FF2E93).
+
+CSS Flexbox & Grid: Powers the responsive layout, organizing cards, form groups, and analytics trackers cleanly across different viewports.
+
+Responsive CSS Media Queries (@media {}): Dynamically adjusts padding, grid column counts, and component alignments for mobile phones, tablets, laptops, and ultra-wide desktop monitors.
+
+2. Client-Side Scripting & Logic (Vanilla JavaScript)
+
+DOM Manipulation & Event Listeners: Handles real-time page switching, form submissions, dynamic input validation, and interactive UI state changes without page reloads.
+
+Browser localStorage API: Manages client-side persistence for user credentials (secops_users) and historical audit stream logs (secops_logs_<username>), ensuring data remains saved across browser sessions and logouts.
+
+Regular Expressions (RegExp): Powers Layer 3 AI threat inspection by scanning transaction payment notes and memos for adversarial patterns (e.g., /ignore previous instructions/i, /transfer_all_funds/i).
+
+3. Audio & Multimedia Tools
+
+Web Audio API (window.AudioContext): A native browser audio synthesizer used to generate zero-dependency cybernetic sound effects programmatically (e.g., ascending success chimes, warning beeps, and pulsing critical alarm sirens during security breaches).
+
+4. PDF Reporting & Data Export Libraries
+
+jsPDF (jspdf.umd.min.js): A client-side JavaScript library used to generate official PDF compliance and audit reports directly in the browser.
+
+jsPDF AutoTable (jspdf.plugin.autotable.min.js): A companion plugin that formats raw session audit logs into structured tabular grids inside the generated PDF document.
+
 Conclusion
 
 The SecureGuard AI Banking Engine demonstrates how modern financial institutions can successfully defend against zero-day AI threats, prompt injection attacks, and unauthorized transaction forgeries. By combining a deterministic 3-tier inspection pipeline (JWT verification, hardware device fingerprinting, and real-time AI regex payload scanning) with instant audio-visual incident response, automated risk analytics, and secure local persistence, this project bridges the gap between theoretical AI security and production-ready fintech compliance.
