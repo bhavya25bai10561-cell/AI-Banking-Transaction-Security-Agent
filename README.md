@@ -50,6 +50,7 @@ Trusted Device Fingerprints: dev_fp_trusted_01, dev_fp_trusted_02
 Custom AI Threat Patterns (Regex): ignore previous, override limits, transfer_all_funds, admin_mode=true
 
 Step 3: Inbound Transaction Test Cases (Section 3)
+
 🧪 Test Case A: Normal Approved Transaction (Low Risk)
 Expected behavior: Plays a clean ascending success chime and green toast notification.
 Transaction ID: TX-7701
@@ -60,6 +61,7 @@ Payment Memo: Monthly server hosting infrastructure invoice.
 Device Fingerprint Hash: dev_fp_trusted_01
 Client IP Address: 192.168.1.12
 JWT Session Token: valid_token_string_abc
+
 🧪 Test Case B: Unrecognized Device (Step-Up MFA Warning)
 Expected behavior: Plays a two-tone warning beep and amber notification banner.
 Transaction ID: TX-7702
@@ -70,6 +72,7 @@ Payment Memo: Emergency freight shipping cost.
 Device Fingerprint Hash: unknown_rogue_device_99 (Triggers MFA)
 Client IP Address: 45.33.10.88
 JWT Session Token: valid_token_string_abc
+
 🧪 Test Case C: AI Prompt Injection (🔴 CRITICAL ALERT & SIREN)
 Expected behavior: Triggers the pulsing red critical toast banner, plays a synthesized cybernetic alarm siren, and requires manual alert dismissal.
 Transaction ID: TX-7703
